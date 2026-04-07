@@ -1093,17 +1093,19 @@
     <div class="stack-cat cat-backend fade-up">
       <div class="stack-cat-title">Backend</div>
       <div class="stack-items">
+        {% if frontends %}
         {% for x in backends %}
         <div class="stack-item"><div class="stack-item-dot" style="background:var(--accent1)"></div>
           {{x.name}}</div>
         {% endfor %}
+        {% endif %}
       </div>
     </div>
 
     <div class="stack-cat cat-frontend fade-up" style="transition-delay:0.1s">
       <div class="stack-cat-title">Frontend</div>
       <div class="stack-items">
-        {% if frontend %}
+        {% if frontends %}
         {% for x in frontends %}
         <div class="stack-item"><div class="stack-item-dot" style="background:var(--accent2)"></div>
           {{x.name}}</div>
