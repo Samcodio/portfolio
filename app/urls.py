@@ -4,6 +4,6 @@ from django.urls import path
 app_name = 'app'
 
 urlpatterns = [
-    path("my-portfolio/", home, name='home'),
+    path("", home, name='home'),
     path("error/", error, name='error')
 ]
