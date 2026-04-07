@@ -1034,6 +1034,7 @@
   <p class="section-sub">A selection of projects that showcase what I can and have built along the years.</p>
   <div class="projects-grid">
 
+    {% if jobs %}
     {% for x in jobs %}
     <div class="project-card fade-up">
       <div class="project-top">
@@ -1074,6 +1075,7 @@
       </div>
     </div>
     {% endfor %}
+    {% endif %}
 
 
   </div>
@@ -1101,29 +1103,35 @@
     <div class="stack-cat cat-frontend fade-up" style="transition-delay:0.1s">
       <div class="stack-cat-title">Frontend</div>
       <div class="stack-items">
+        {% if frontend %}
         {% for x in frontends %}
         <div class="stack-item"><div class="stack-item-dot" style="background:var(--accent2)"></div>
           {{x.name}}</div>
         {% endfor %}
+        {% endif %}
       </div>
     </div>
 
     <div class="stack-cat cat-db fade-up" style="transition-delay:0.2s">
       <div class="stack-cat-title">Databases</div>
       <div class="stack-items">
+        {% if databases %}
         {% for x in databases %}
         <div class="stack-item"><div class="stack-item-dot" style="background:var(--accent4)"></div>
           {{x.name}}</div>
         {% endfor %}
+        {% endif %}
       </div>
     </div>
 
     <div class="stack-cat cat-tools fade-up" style="transition-delay:0.3s">
       <div class="stack-cat-title">Tools</div>
       <div class="stack-items">
+        {% if tools %}
         {% for x in tools %}
         <div class="stack-item"><div class="stack-item-dot" style="background:var(--accent3)"></div>{{x.name}}</div>
         {% endfor %}
+        {% endif %}
       </div>
     </div>
 
